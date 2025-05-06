@@ -8,7 +8,7 @@ if os.getenv('USER', "None") == 'appuser':
     hf_token = st.secrets['HF_TOKEN']
     os.environ["HUGGINGFACEHUB_API_TOKEN"] = hf_token
 else:
-    os.environ['HUGGINGFACEHUB_API_TOKEN'] = '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'
+    os.environ['HUGGINGFACEHUB_API_TOKEN'] = os.environ['HF_TOKEN']
 
 st.title("my gen ai app")
 repo_id="microsoft/Phi-3-mini-4k-instruct"
